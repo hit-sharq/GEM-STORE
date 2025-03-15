@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LJ Gem Store</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <header>
+        <img src="images/64e75d12-ce17-4279-98a5-d0485f325096.jpeg" alt="Profile Picture" style="width: 100px; height: 100px; border-radius: 50%;">
+        <h1>Welcome to LJ Gem Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="content-section">
+            <h2>Featured Gems</h2>
+            <div class="gem-gallery">
+                <img src="images/Malachite Meaning _ Malachite Crystal Benefits _ Malachite Healing Properties _ Malachite Uses _ Mal.jpeg" alt="Gem 1" style="width: 300px;">
+                <img src="images/download.jpeg" alt="Gem 2" style="width: 300px;">
+                <img src="images/Malachite Meaning _ Malachite Crystal Benefits _ Malachite Healing Properties _ Malachite Uses _ Mal.jpeg" alt="Gem 3" style="width: 300px;">
+                <img src="images/Gem Stone King 8X6MM Oval Drop Dangle Earrings for Women _ 925 Sterling Silver _ Genuine Gemstone Birthstone Leverback Earrings _ Fine Jewelry Gifts for Her Mom Women Wife.jpeg" alt="Gem 4" style ="width: 300px;">
+            </div>
+            <p>Discover a variety of beautiful and ethically sourced gemstones. Each piece is unique and waiting to find a home with you.</p>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section" style="display: none;">
+            <h2>About Us</h2>
+            <p>At LJ, we are passionate about bringing the beauty of nature's finest treasures to you. Specializing in ethically sourced gems, our collection features a stunning array of unique pieces that celebrate individuality and elegance. With a commitment to quality and exceptional customer service, we strive to connect each gem to its new owner, ensuring a truly personal experience. Join us in exploring the captivating world of gemstones and discover the perfect addition to your collection!
+
+                Our Story
+                The journey of LJ Gem Store began with a simple yet profound moment in the heart of a vibrant, bustling market in Jaipur, India. Lee Joshua, affectionately known as LJ, was a young traveler with a deep appreciation for the beauty of nature and an adventurous spirit. While exploring the rich hues of the local gems and learning about their origins, he had a life-changing revelation: gems are not just beautiful objects; they carry stories of the earth and the hands that have touched them.
+                
+                Inspired by this realization, LJ decided to embark on a quest to bring ethically sourced gemstones to the world. He traveled across continents, from the serene beaches of Bali to the rugged terrains of South America, meeting artisans and miners who shared their passion for honest and ethical gem sourcing. These experiences fueled his commitment to sustainability and transparency in the gem industry.
+                
+                With a vision to create a space where people could not only find exquisite gems but also connect with their stories, LJ founded LJ Gem Store. Each piece in our collection reflects this dedication—curated with care, meticulously evaluated for quality, and celebrated for its individuality.  
+                
+                But LJ's mission extends beyond just selling gems. He believes that each gem has its destined owner, and it is his joy to help people find the perfect match that resonates with their personality and style. Whether you're looking for a statement piece, a meaningful gift, or simply a beautiful adornment, LJ Gem Store is dedicated to making your experience personal and memorable.
+                
+                Join LJ on this enchanting journey of discovery and let us help you find the gem that speaks to you, celebrating the exquisite beauty of nature and the connections we forge through it.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section" style="display: none;">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" rows="4" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 LJ Gem Store. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script> <!-- Link to external JavaScript -->
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none'; // Hide all sections
+            });
+            document.getElementById(sectionId).style.display = 'block'; 
+        }
+    </script>
+</body>
+</html>
